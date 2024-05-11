@@ -26,7 +26,7 @@
 #include <stdlib.h>
 
 #include <utils/Atomic.h>
-#include <utils/Log.h>
+#include <log/log.h>
 
 #include <hardware/sensors.h>
 
@@ -831,4 +831,3 @@ static int open_sensors(const struct hw_module_t* module, const char*,
 
     return 0;
 }
-

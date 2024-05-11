@@ -15,7 +15,9 @@ LOCAL_SHARED_LIBRARIES := \
 	libtinyalsa \
 	libtinycompress \
 	libaudioroute \
-	libdl
+	libdl \
+	libhardware \
+	libprocessgroup
 
 
 LOCAL_C_INCLUDES += \

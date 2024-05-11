@@ -20,7 +20,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware
 LOCAL_SRC_FILES := power_flounder.c
 LOCAL_MODULE := power.flounder
 LOCAL_MODULE_TAGS := optional

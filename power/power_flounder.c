@@ -27,7 +27,7 @@
 //#define LOG_NDEBUG 0
 
 #define LOG_TAG "FlounderPowerHAL"
-#include <utils/Log.h>
+#include <log/log.h>
 
 #include <hardware/hardware.h>
 #include <hardware/power.h>
@@ -279,4 +279,3 @@ struct flounder_power_module HAL_MODULE_INFO_SYM = {
     boostpulse_fd: -1,
     boostpulse_warned: 0,
 };
-
