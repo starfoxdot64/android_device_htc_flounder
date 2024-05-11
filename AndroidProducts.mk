@@ -19,6 +19,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_flounder.mk
 
 COMMON_LUNCH_CHOICES :=  \
-    lineage_flounder-userdebug \
-    lineage_flounder-user \
-    lineage_flounder-env
+    lineage_flounder-ap1a-userdebug \
+    lineage_flounder-ap1a-user \
+    lineage_flounder-ap1a-env
