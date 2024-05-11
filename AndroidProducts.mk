@@ -21,4 +21,4 @@ PRODUCT_MAKEFILES := \
 COMMON_LUNCH_CHOICES :=  \
     lineage_flounder-ap1a-userdebug \
     lineage_flounder-ap1a-user \
-    lineage_flounder-ap1a-env
+    lineage_flounder-ap1a-eng
