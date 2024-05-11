@@ -3,7 +3,7 @@ on early-init
 
 on init
     # Load persistent dm-verity state
-    verity_load_state
+    #verity_load_state
 
     start watchdogd
 

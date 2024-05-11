@@ -11,7 +11,6 @@ type ramdump_data_file, file_type, data_file_type;
 type sysfs_didim, sysfs_type, fs_type;
 
 # host1x graphics files
-type sysfs_gpu, sysfs_type, fs_type;
 
 type sysfs_swap, sysfs_type, fs_type;
 type sysfs_socinfo, sysfs_type, fs_type;

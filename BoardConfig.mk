@@ -22,13 +22,15 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := denver64
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := denver64
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := denver
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := denver
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
@@ -36,6 +38,8 @@ BUILD_EMULATOR := false
 TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=flounder
+
+TARGET_KERNEL_CLANG_COMPILE := false
 
 TARGET_NO_RADIOIMAGE := true
 
@@ -82,7 +86,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
 
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.flounder
+#BOARD_HAL_STATIC_LIBRARIES := libhealthd.flounder
 
 BOARD_VENDOR_USE_SENSOR_HAL := sensor_hub
 
@@ -108,7 +112,6 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 BOARD_SEPOLICY_DIRS += device/htc/flounder/sepolicy
 
 TARGET_USES_64_BIT_BCMDHD := true
-TARGET_USES_64_BIT_BINDER := true
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
@@ -133,3 +136,5 @@ include vendor/htc/flounder_lte/BoardConfigVendor.mk
 else
 include vendor/htc/flounder/BoardConfigVendor.mk
 endif
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

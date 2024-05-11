@@ -41,9 +41,6 @@ $(LOCAL_BUILT_MODULE) : $(volantis_keymaps) | $(validatekeymaps)
 	$(hide) $(PRIVATE_VALIDATEKEYMAPS) $^
 	$(hide) mkdir -p $(dir $@) && touch $@
 
-# Run validatekeymaps unconditionally for platform build.
-droidcore all_modules : $(LOCAL_BUILT_MODULE)
-
 # Reset temp vars.
 validatekeymaps :=
 volantis_keymaps :=

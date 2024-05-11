@@ -16,7 +16,7 @@
 
 # Wifi
 PRODUCT_PACKAGES := \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     libwpa_client \
     hostapd \
     wpa_supplicant \
@@ -193,12 +193,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    hwcomposer.flounder
+    android.hardware.graphics.composer3-V3-ndk
 
 # Health HAL
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
     android.hardware.health@1.0-service
 
@@ -244,7 +243,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-    fsck.f2fs mkfs.f2fs
+    fsck.f2fs make_f2fs
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
@@ -270,10 +269,8 @@ PRODUCT_PACKAGES += \
 # for audio
 PRODUCT_PACKAGES += \
     audio.primary.flounder \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libhtcacoustic
+    audio.r_submix.default
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
 

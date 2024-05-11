@@ -7,6 +7,11 @@ TARGET_SCREEN_WIDTH := 1536
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
+## Inherit from generic products, most specific first
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
 
@@ -39,3 +44,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_NAME := lineage_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
+
+SELINUX_IGNORE_NEVERALLOWS=true
