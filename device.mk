@@ -197,9 +197,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V3-ndk
 
 # Health HAL
-#PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-service
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+		android.hardware.health@2.0-service.tegra
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
