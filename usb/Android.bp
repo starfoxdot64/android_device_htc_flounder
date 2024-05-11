@@ -6,9 +6,7 @@ cc_binary {
     shared_libs: [
         "libcutils",
         "libhidlbase",
-        "libhidltransport",
         "liblog",
-        "libhwbinder",
         "libutils",
         "libhardware",
         "android.hardware.usb@1.0",
